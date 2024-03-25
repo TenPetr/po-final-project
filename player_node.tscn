@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://dwdf2lm60jjpn"]
+
+[ext_resource type="Script" path="res://Player.gd" id="1_b8biu"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1eo1n"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_e78hr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jfuge"]
+
+[node name="PlayerNode" type="Node2D"]
+
+[node name="Player" type="CharacterBody2D" parent="."]
+script = ExtResource("1_b8biu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+scale = Vector2(25, 25)
+shape = SubResource("RectangleShape2D_1eo1n")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player"]
+texture = SubResource("NoiseTexture2D_e78hr")
+
+[node name="Detect" type="Area2D" parent="Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Detect"]
+scale = Vector2(27, 27)
+shape = SubResource("RectangleShape2D_jfuge")
