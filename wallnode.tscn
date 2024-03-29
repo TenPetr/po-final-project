@@ -1,0 +1,50 @@
+[gd_scene load_steps=6 format=3 uid="uid://brg7m8ll1ukxl"]
+
+[ext_resource type="Script" path="res://Walls.gd" id="1_egbr6"]
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vrkcq"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fcmjy"]
+
+[sub_resource type="OccluderPolygon2D" id="OccluderPolygon2D_ktg6v"]
+polygon = PackedVector2Array(-264, -4237, -255, -1169, 245, -1174, 245, -4232)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_0px1i"]
+
+[node name="Wallnode" type="Node2D"]
+
+[node name="Walls" type="StaticBody2D" parent="."]
+script = ExtResource("1_egbr6")
+
+[node name="UpperWallSprite2D" type="Sprite2D" parent="Walls"]
+position = Vector2(0, -2700)
+scale = Vector2(1, 6)
+texture = SubResource("NoiseTexture2D_vrkcq")
+
+[node name="UpperWallCol" type="CollisionShape2D" parent="Walls"]
+position = Vector2(0, -2700)
+scale = Vector2(25, 153)
+shape = SubResource("RectangleShape2D_fcmjy")
+
+[node name="UpperLightOccluder2D" type="LightOccluder2D" parent="Walls"]
+occluder = SubResource("OccluderPolygon2D_ktg6v")
+
+[node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls"]
+position = Vector2(0, 2700)
+scale = Vector2(1, 6)
+texture = SubResource("NoiseTexture2D_vrkcq")
+
+[node name="LowerWallCol2" type="CollisionShape2D" parent="Walls"]
+position = Vector2(0, 2700)
+scale = Vector2(25, 153)
+shape = SubResource("RectangleShape2D_fcmjy")
+
+[node name="UpperLightOccluder2D2" type="LightOccluder2D" parent="Walls"]
+position = Vector2(15, 5407)
+occluder = SubResource("OccluderPolygon2D_ktg6v")
+
+[node name="PointArea" type="Area2D" parent="Walls"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/PointArea"]
+scale = Vector2(20, 115)
+shape = SubResource("RectangleShape2D_0px1i")
