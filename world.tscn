@@ -1,4 +1,4 @@
-[gd_scene load_steps=6 format=3 uid="uid://qjugr1frdbvr"]
+[gd_scene load_steps=7 format=3 uid="uid://qjugr1frdbvr"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_amjm2"]
 [ext_resource type="PackedScene" uid="uid://brg7m8ll1ukxl" path="res://wallnode.tscn" id="2_u1trt"]
@@ -8,6 +8,8 @@
 [sub_resource type="NoiseTexture2D" id="NoiseTexture2D_e78hr"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfuge"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4sl3b"]
 
 [node name="World" type="Node2D"]
 
@@ -29,8 +31,18 @@ texture = SubResource("NoiseTexture2D_e78hr")
 scale = Vector2(27, 27)
 shape = SubResource("RectangleShape2D_jfuge")
 
+[node name="Resetter" type="Area2D" parent="PlayerNode/Player"]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player/Resetter"]
+position = Vector2(-17893, 6.10352e-05)
+scale = Vector2(25, 400)
+shape = SubResource("RectangleShape2D_4sl3b")
+
 [node name="Wallnode" parent="." instance=ExtResource("2_u1trt")]
+position = Vector2(-256, -256)
 metadata/_edit_group_ = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.1, 0.1)
+
+[connection signal="body_entered" from="PlayerNode/Player/Resetter" to="PlayerNode/Player" method="_on_resetter_body_entered"]

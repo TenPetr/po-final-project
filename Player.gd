@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 const SPEED = 300.0
-const FLAP = -5000
+const FLAP = -10000
 const MAXFALLSPEED = 2000
 const GRAVITY = 1000
 const JUMP_VELOCITY = -400.0
@@ -9,6 +9,7 @@ const JUMP_VELOCITY = -400.0
 # Get the gravity from the project settings to be synced with RigidBody nodes.
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var motion = Vector2.ZERO
+var wall : PackedScene = preload("res://wallnode.tscn")
 
 func _physics_process(delta: float) -> void:
 	motion.y += GRAVITY
@@ -37,3 +38,13 @@ func _physics_process(delta: float) -> void:
 		#velocity.x = move_toward(velocity.x, 0, SPEED)
 #
 	#move_and_slide()
+
+func Wall_reset():
+	var wall_inst = wall.instantiate()
+	wall_inst.position = Vector2(3000, randi_range(-2500, 2500))
+	get_parent().call_deferred("add_child", wall_inst)
+	
+func _on_resetter_body_entered(body):
+	if body.name == "Walls":
+		body.queue_free()
+		Wall_reset()
