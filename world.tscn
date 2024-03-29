@@ -41,7 +41,7 @@ shape = SubResource("RectangleShape2D_jfuge")
 [node name="Resetter" type="Area2D" parent="PlayerNode/Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player/Resetter"]
-position = Vector2(-17893, 6.10352e-05)
+position = Vector2(-18909, 0)
 scale = Vector2(25, 400)
 shape = SubResource("RectangleShape2D_4sl3b")
 
