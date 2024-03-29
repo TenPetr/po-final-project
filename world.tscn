@@ -1,7 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://qjugr1frdbvr"]
+[gd_scene load_steps=8 format=3 uid="uid://qjugr1frdbvr"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_amjm2"]
 [ext_resource type="PackedScene" uid="uid://brg7m8ll1ukxl" path="res://wallnode.tscn" id="2_u1trt"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_yxxgh"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eo1n"]
 
@@ -12,6 +14,11 @@
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4sl3b"]
 
 [node name="World" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+modulate = Color(0.74902, 1, 1, 1)
+scale = Vector2(100000, 100000)
+texture = SubResource("CanvasTexture_yxxgh")
 
 [node name="PlayerNode" type="Node2D" parent="."]
 
@@ -45,4 +52,17 @@ metadata/_edit_group_ = true
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(0.1, 0.1)
 
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+scale = Vector2(30, 30)
+transform = Transform2D(30, 0, 0, 30, 0, 0)
+follow_viewport_enabled = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = -178.967
+offset_top = -97.6667
+offset_right = -138.967
+offset_bottom = -57.6667
+
+[connection signal="area_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_area_entered"]
+[connection signal="body_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_body_entered"]
 [connection signal="body_entered" from="PlayerNode/Player/Resetter" to="PlayerNode/Player" method="_on_resetter_body_entered"]

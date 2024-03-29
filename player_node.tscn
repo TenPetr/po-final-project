@@ -25,3 +25,6 @@ texture = SubResource("NoiseTexture2D_e78hr")
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Detect"]
 scale = Vector2(27, 27)
 shape = SubResource("RectangleShape2D_jfuge")
+
+[connection signal="area_entered" from="Player/Detect" to="Player" method="_on_detect_area_entered"]
+[connection signal="body_entered" from="Player/Detect" to="Player" method="_on_detect_body_entered"]

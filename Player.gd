@@ -10,6 +10,7 @@ const JUMP_VELOCITY = -400.0
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var motion = Vector2.ZERO
 var wall : PackedScene = preload("res://wallnode.tscn")
+var score = 0 
 
 func _physics_process(delta: float) -> void:
 	motion.y += GRAVITY
@@ -21,6 +22,8 @@ func _physics_process(delta: float) -> void:
 		
 	self.velocity = motion # Set the body's velocity property
 	self.move_and_slide() # Call move_and_slide with no parameters
+	
+	get_parent().get_parent().get_node("CanvasLayer/RichTextLabel").text = str(score)
 	# Add the gravity.
 	#if not is_on_floor():
 		#velocity.y += gravity * delta
@@ -48,3 +51,15 @@ func _on_resetter_body_entered(body):
 	if body.name == "Walls":
 		body.queue_free()
 		Wall_reset()
+
+
+func _on_detect_area_entered(area):
+	if area.name == "PointArea":
+		score = score + 1
+		
+
+#func _on_detect_body_entered(body):
+	#if body.name == "Walls":     
+		#get_tree().reload_current_scene()
+
+
