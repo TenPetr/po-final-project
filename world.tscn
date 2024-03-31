@@ -3,7 +3,7 @@
 [ext_resource type="Script" path="res://Player.gd" id="1_amjm2"]
 [ext_resource type="Texture2D" uid="uid://dkdti2r0levi1" path="res://assets/player.png" id="2_6vi1w"]
 [ext_resource type="PackedScene" uid="uid://brg7m8ll1ukxl" path="res://wallnode.tscn" id="2_u1trt"]
-[ext_resource type="Texture2D" uid="uid://b5yu068n6khwi" path="res://assets/background.jpg" id="3_ogixm"]
+[ext_resource type="Texture2D" uid="uid://bi70bh5bl4kmg" path="res://assets/background_blurred.jpg" id="4_4uv85"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eo1n"]
 size = Vector2(28.48, 29.32)
@@ -87,7 +87,7 @@ text = "Credits - 0"
 [node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
 position = Vector2(27.4993, -28.0001)
 scale = Vector2(9.48047, 9.70556)
-texture = ExtResource("3_ogixm")
+texture = ExtResource("4_4uv85")
 
 [connection signal="area_exited" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_area_exited"]
 [connection signal="body_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_body_entered"]

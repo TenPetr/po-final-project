@@ -6,8 +6,8 @@ This plan outlines the development of a game inspired by Flappy Bird, tailored t
 
 ## Team Composition
 - 2 Team Members
-    - Bc. Petr Jelínek (p2_jelinek@utb.cz)
-    - Bc. et Bc. Jana Šimečková (j1_simeckova@utb.cz)
+	- Bc. Petr Jelínek (p2_jelinek@utb.cz)
+	- Bc. et Bc. Jana Šimečková (j1_simeckova@utb.cz)
 
 ## Sprint Breakdown
 ### Sprint 0: Planning and Setup
