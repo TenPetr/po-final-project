@@ -1,12 +1,13 @@
 [gd_scene load_steps=5 format=3 uid="uid://dwdf2lm60jjpn"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_b8biu"]
+[ext_resource type="Texture2D" uid="uid://dkdti2r0levi1" path="res://assets/player.png" id="2_lk4bf"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eo1n"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_e78hr"]
+size = Vector2(18.36, 17.4)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfuge"]
+size = Vector2(17.1111, 16.2222)
 
 [node name="PlayerNode" type="Node2D"]
 
@@ -14,15 +15,19 @@
 script = ExtResource("1_b8biu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player"]
+position = Vector2(-6.5, -3.50002)
 scale = Vector2(25, 25)
 shape = SubResource("RectangleShape2D_1eo1n")
 
 [node name="Sprite2D" type="Sprite2D" parent="Player"]
-texture = SubResource("NoiseTexture2D_e78hr")
+position = Vector2(-4.99995, -1)
+scale = Vector2(0.934, 0.965333)
+texture = ExtResource("2_lk4bf")
 
 [node name="Detect" type="Area2D" parent="Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Player/Detect"]
+position = Vector2(-6.99999, -2.00001)
 scale = Vector2(27, 27)
 shape = SubResource("RectangleShape2D_jfuge")
 

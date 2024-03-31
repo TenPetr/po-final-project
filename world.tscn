@@ -1,14 +1,15 @@
 [gd_scene load_steps=9 format=3 uid="uid://qjugr1frdbvr"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_amjm2"]
+[ext_resource type="Texture2D" uid="uid://dkdti2r0levi1" path="res://assets/player.png" id="2_6vi1w"]
 [ext_resource type="PackedScene" uid="uid://brg7m8ll1ukxl" path="res://wallnode.tscn" id="2_u1trt"]
 [ext_resource type="Texture2D" uid="uid://b5yu068n6khwi" path="res://assets/background.jpg" id="3_ogixm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eo1n"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_e78hr"]
+size = Vector2(28.48, 29.32)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_jfuge"]
+size = Vector2(26.7778, 27.5926)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4sl3b"]
 
@@ -29,15 +30,19 @@ position = Vector2(-2099, -305)
 script = ExtResource("1_amjm2")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player"]
+position = Vector2(109, -141.5)
 scale = Vector2(25, 25)
 shape = SubResource("RectangleShape2D_1eo1n")
 
 [node name="Sprite2D" type="Sprite2D" parent="PlayerNode/Player"]
-texture = SubResource("NoiseTexture2D_e78hr")
+position = Vector2(106.5, -144.5)
+scale = Vector2(1.426, 1.578)
+texture = ExtResource("2_6vi1w")
 
 [node name="Detect" type="Area2D" parent="PlayerNode/Player"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player/Detect"]
+position = Vector2(109.5, -141.5)
 scale = Vector2(27, 27)
 shape = SubResource("RectangleShape2D_jfuge")
 
