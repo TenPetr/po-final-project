@@ -2,8 +2,7 @@
 
 [ext_resource type="Script" path="res://Player.gd" id="1_amjm2"]
 [ext_resource type="PackedScene" uid="uid://brg7m8ll1ukxl" path="res://wallnode.tscn" id="2_u1trt"]
-
-[sub_resource type="CanvasTexture" id="CanvasTexture_yxxgh"]
+[ext_resource type="Texture2D" uid="uid://b5yu068n6khwi" path="res://assets/background.jpg" id="3_ogixm"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eo1n"]
 
@@ -22,12 +21,8 @@ corner_radius_bottom_left = 5
 
 [node name="World" type="Node2D"]
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
-modulate = Color(0.74902, 1, 1, 1)
-scale = Vector2(100000, 100000)
-texture = SubResource("CanvasTexture_yxxgh")
-
 [node name="PlayerNode" type="Node2D" parent="."]
+z_index = 1
 position = Vector2(-2099, -305)
 
 [node name="Player" type="CharacterBody2D" parent="PlayerNode"]
@@ -79,6 +74,15 @@ offset_right = -48.4
 offset_bottom = -64.0667
 theme_override_colors/default_color = Color(1, 1, 1, 1)
 text = "Credits - 0"
+
+[node name="Background" type="ParallaxBackground" parent="."]
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+
+[node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
+position = Vector2(27.4993, -28.0001)
+scale = Vector2(9.48047, 9.70556)
+texture = ExtResource("3_ogixm")
 
 [connection signal="area_exited" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_area_exited"]
 [connection signal="body_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_body_entered"]
