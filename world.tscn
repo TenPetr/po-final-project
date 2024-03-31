@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://qjugr1frdbvr"]
+[gd_scene load_steps=9 format=3 uid="uid://qjugr1frdbvr"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_amjm2"]
 [ext_resource type="PackedScene" uid="uid://brg7m8ll1ukxl" path="res://wallnode.tscn" id="2_u1trt"]
@@ -13,6 +13,13 @@
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_4sl3b"]
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_o1hra"]
+bg_color = Color(1, 0.568627, 0.294118, 0.729412)
+corner_radius_top_left = 5
+corner_radius_top_right = 5
+corner_radius_bottom_right = 5
+corner_radius_bottom_left = 5
+
 [node name="World" type="Node2D"]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -21,6 +28,7 @@ scale = Vector2(100000, 100000)
 texture = SubResource("CanvasTexture_yxxgh")
 
 [node name="PlayerNode" type="Node2D" parent="."]
+position = Vector2(-2099, -305)
 
 [node name="Player" type="CharacterBody2D" parent="PlayerNode"]
 script = ExtResource("1_amjm2")
@@ -57,12 +65,21 @@ scale = Vector2(30, 30)
 transform = Transform2D(30, 0, 0, 30, 0, 0)
 follow_viewport_enabled = true
 
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
-offset_left = -178.967
-offset_top = -97.6667
-offset_right = -138.967
-offset_bottom = -57.6667
+[node name="ScorePanel" type="Panel" parent="CanvasLayer"]
+offset_left = -177.0
+offset_top = -93.0
+offset_right = -79.0
+offset_bottom = -62.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_o1hra")
 
-[connection signal="area_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_area_entered"]
+[node name="ScoreText" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = -168.4
+offset_top = -89.0667
+offset_right = -48.4
+offset_bottom = -64.0667
+theme_override_colors/default_color = Color(1, 1, 1, 1)
+text = "Credits - 0"
+
+[connection signal="area_exited" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_area_exited"]
 [connection signal="body_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_body_entered"]
 [connection signal="body_entered" from="PlayerNode/Player/Resetter" to="PlayerNode/Player" method="_on_resetter_body_entered"]
