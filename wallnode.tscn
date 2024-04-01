@@ -14,6 +14,9 @@ polygon = PackedVector2Array(-264, -4237, -255, -1169, 245, -1174, 245, -4232)
 [node name="Wallnode" type="Node2D"]
 
 [node name="Walls" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls"]
@@ -50,6 +53,9 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls2" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 position = Vector2(2311, -416)
 script = ExtResource("1_egbr6")
 
@@ -87,6 +93,9 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls3" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 position = Vector2(4788, 560)
 script = ExtResource("1_egbr6")
 
@@ -124,6 +133,9 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls4" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 position = Vector2(6998, 103)
 script = ExtResource("1_egbr6")
 
@@ -161,6 +173,9 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls5" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 position = Vector2(9563, -583)
 script = ExtResource("1_egbr6")
 
@@ -198,6 +213,9 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls6" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 position = Vector2(11595, 738)
 script = ExtResource("1_egbr6")
 
@@ -235,6 +253,9 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls7" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 position = Vector2(13551, -151)
 script = ExtResource("1_egbr6")
 
@@ -272,6 +293,9 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls8" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 position = Vector2(15532, 839)
 script = ExtResource("1_egbr6")
 
@@ -309,6 +333,9 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls9" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 position = Vector2(17462, 26)
 script = ExtResource("1_egbr6")
 
@@ -346,6 +373,9 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls10" type="StaticBody2D" parent="."]
+modulate = Color(0.270588, 0, 0.486275, 1)
+self_modulate = Color(0.270588, 0, 0.486275, 1)
+texture_filter = 2
 position = Vector2(19367, 737)
 script = ExtResource("1_egbr6")
 
