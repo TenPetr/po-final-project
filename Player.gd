@@ -11,6 +11,10 @@ var motion = Vector2.ZERO
 var wall: PackedScene = preload("res://wallnode.tscn")
 var score = 0 
 
+
+func increase_wall_speed(increase_amount: float) -> void:
+	Global.wall_speed -= increase_amount
+
 func _physics_process(delta: float) -> void:
 	motion.y += GRAVITY
 	if motion.y > MAXFALLSPEED:
@@ -28,6 +32,7 @@ func Wall_reset():
 	var wall_inst = wall.instantiate()
 	wall_inst.position = Vector2(3000, randi_range(-1500, 1500))
 	get_parent().call_deferred("add_child", wall_inst)
+	increase_wall_speed(10)
 	
 func _on_resetter_body_entered(body):
 	if body.name == "Walls":

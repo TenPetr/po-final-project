@@ -4,4 +4,4 @@ func _ready():
 	pass 
 
 func _physics_process(delta):
-	position += Vector2(-10,0)
+	position += Vector2(Global.wall_speed,0)
