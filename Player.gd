@@ -27,16 +27,18 @@ func _physics_process(delta: float) -> void:
 	
 	get_parent().get_parent().get_node("CanvasLayer/ScoreText").text = "Credits - " + str(score)
 	
-func Wall_reset():
+func generate_new_level():
 	var wall_inst = wall.instantiate()
-	wall_inst.position = Vector2(3000, randi_range(-1500, 1500))
+	wall_inst.position = Vector2(3000, randi_range(-1000, 1000))
 	get_parent().call_deferred("add_child", wall_inst)
 	increase_wall_speed(10)
-	
+
+# Detect "player passed all walls in semester successully"
+# and new walls (level) needs to be generated
 func _on_resetter_body_entered(body):
 	if body.name == "Walls":
 		body.queue_free()
-		Wall_reset()
+		generate_new_level()
 
 # Detect collission player - wall
 func _on_detect_body_entered(body):
@@ -44,7 +46,7 @@ func _on_detect_body_entered(body):
 		get_tree().reload_current_scene()
 		Global.wall_speed = -15
 
-# Add point when player successfully leaves the "wall area"
+# Add credit when player successfully leaves the "wall area"
 func _on_detect_area_exited(area):
 	if area.name == "PointArea":
-		score = score + 1
+		score += 1
