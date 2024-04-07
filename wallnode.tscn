@@ -1,8 +1,7 @@
 [gd_scene load_steps=6 format=3 uid="uid://brg7m8ll1ukxl"]
 
 [ext_resource type="Script" path="res://Walls.gd" id="1_egbr6"]
-
-[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_vrkcq"]
+[ext_resource type="Texture2D" uid="uid://cknqivxee3sot" path="res://assets/wall.png" id="2_6a4d2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_fcmjy"]
 
@@ -10,19 +9,18 @@
 polygon = PackedVector2Array(-264, -4237, -255, -1169, 245, -1174, 245, -4232)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_0px1i"]
+size = Vector2(42.85, 21.1391)
 
 [node name="Wallnode" type="Node2D"]
 
 [node name="Walls" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(33.5, -3801.34)
+scale = Vector2(3.31519, 6.07096)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls"]
 position = Vector2(0, -2700)
@@ -33,9 +31,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(-16, 3767.88)
+scale = Vector2(3.20344, 6.05584)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls"]
 position = Vector2(0, 2700)
@@ -49,20 +47,19 @@ occluder = SubResource("OccluderPolygon2D_ktg6v")
 [node name="PointArea" type="Area2D" parent="Walls"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls/PointArea"]
+position = Vector2(0, 0.499996)
 scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls2" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
-position = Vector2(2311, -416)
+position = Vector2(2997, -416)
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls2"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(53.5001, -3517.5)
+scale = Vector2(3.30946, 5.48032)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls2"]
 position = Vector2(0, -2700)
@@ -73,9 +70,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls2"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(-69.5, 3796)
+scale = Vector2(3.18338, 6.09722)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls2"]
 position = Vector2(0, 2700)
@@ -89,20 +86,19 @@ occluder = SubResource("OccluderPolygon2D_ktg6v")
 [node name="PointArea" type="Area2D" parent="Walls2"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Walls2/PointArea"]
+position = Vector2(-30.5, 0)
 scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls3" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
-position = Vector2(4788, 560)
+position = Vector2(6133, 613)
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls3"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(-6.49995, -3730.5)
+scale = Vector2(3.21776, 5.93171)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls3"]
 position = Vector2(0, -2700)
@@ -113,9 +109,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls3"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(-4.49987, 3556)
+scale = Vector2(3.46418, 5.52546)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls3"]
 position = Vector2(0, 2700)
@@ -133,16 +129,14 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls4" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
-position = Vector2(6998, 103)
+position = Vector2(9029, 103)
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls4"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(12.0002, -3748)
+scale = Vector2(3.3467, 5.99768)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls4"]
 position = Vector2(0, -2700)
@@ -153,9 +147,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls4"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(10.0001, 3550.5)
+scale = Vector2(3.22923, 5.42477)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls4"]
 position = Vector2(0, 2700)
@@ -173,16 +167,14 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls5" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
-position = Vector2(9563, -583)
+position = Vector2(12052, -583)
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls5"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(13.5001, -3710.5)
+scale = Vector2(3.16046, 5.87384)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls5"]
 position = Vector2(0, -2700)
@@ -193,9 +185,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls5"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(1.00003, 3640)
+scale = Vector2(2.91977, 5.73032)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls5"]
 position = Vector2(0, 2700)
@@ -213,16 +205,14 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls6" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
-position = Vector2(11595, 738)
+position = Vector2(15077, 712)
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls6"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(25.0001, -3637.86)
+scale = Vector2(3.2894, 5.75959)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls6"]
 position = Vector2(0, -2700)
@@ -233,9 +223,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls6"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(3.99963, 3754)
+scale = Vector2(3.2149, 6.09259)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls6"]
 position = Vector2(0, 2700)
@@ -253,16 +243,14 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls7" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
-position = Vector2(13551, -151)
+position = Vector2(17980, -177)
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls7"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(35, -3827.04)
+scale = Vector2(3.19484, 6.19898)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls7"]
 position = Vector2(0, -2700)
@@ -273,9 +261,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls7"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(-16.4998, 3826.9)
+scale = Vector2(3.09742, 6.35672)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls7"]
 position = Vector2(0, 2700)
@@ -293,16 +281,14 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls8" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
-position = Vector2(15532, 839)
+position = Vector2(21035, 813)
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls8"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(16.5003, -3877)
+scale = Vector2(3.30945, 6.17361)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls8"]
 position = Vector2(0, -2700)
@@ -313,9 +299,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls8"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(24.4996, 3932)
+scale = Vector2(3.26361, 6.51389)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls8"]
 position = Vector2(0, 2700)
@@ -333,16 +319,14 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls9" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
-position = Vector2(17462, 26)
+position = Vector2(24100, -53)
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls9"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(26.4998, -3961.5)
+scale = Vector2(3.34957, 6.42245)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls9"]
 position = Vector2(0, -2700)
@@ -353,9 +337,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls9"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(11.0005, 3993)
+scale = Vector2(3.31805, 6.55556)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls9"]
 position = Vector2(0, 2700)
@@ -373,16 +357,14 @@ scale = Vector2(20, 115)
 shape = SubResource("RectangleShape2D_0px1i")
 
 [node name="Walls10" type="StaticBody2D" parent="."]
-modulate = Color(0.270588, 0, 0.486275, 1)
-self_modulate = Color(0.270588, 0, 0.486275, 1)
 texture_filter = 2
-position = Vector2(19367, 737)
+position = Vector2(27192, 632)
 script = ExtResource("1_egbr6")
 
 [node name="UpperWallSprite2D" type="Sprite2D" parent="Walls10"]
-position = Vector2(0, -2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(31.0007, -3739)
+scale = Vector2(3.34384, 5.94444)
+texture = ExtResource("2_6a4d2")
 
 [node name="UpperWallCol" type="CollisionShape2D" parent="Walls10"]
 position = Vector2(0, -2700)
@@ -393,9 +375,9 @@ shape = SubResource("RectangleShape2D_fcmjy")
 occluder = SubResource("OccluderPolygon2D_ktg6v")
 
 [node name="LowerWallSprite2D2" type="Sprite2D" parent="Walls10"]
-position = Vector2(0, 2700)
-scale = Vector2(1, 6)
-texture = SubResource("NoiseTexture2D_vrkcq")
+position = Vector2(33.9995, 4062)
+scale = Vector2(3.40401, 6.78935)
+texture = ExtResource("2_6a4d2")
 
 [node name="LowerWallCol2" type="CollisionShape2D" parent="Walls10"]
 position = Vector2(0, 2700)

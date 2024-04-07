@@ -11,7 +11,6 @@ var motion = Vector2.ZERO
 var wall: PackedScene = preload("res://wallnode.tscn")
 var score = 0 
 
-
 func increase_wall_speed(increase_amount: float) -> void:
 	Global.wall_speed -= increase_amount
 
@@ -43,6 +42,7 @@ func _on_resetter_body_entered(body):
 func _on_detect_body_entered(body):
 	if body.name.contains("Walls"):     
 		get_tree().reload_current_scene()
+		Global.wall_speed = -15
 
 # Add point when player successfully leaves the "wall area"
 func _on_detect_area_exited(area):
