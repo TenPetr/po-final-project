@@ -1,0 +1,106 @@
+[gd_scene load_steps=3 format=3 uid="uid://dkwas7p5xm3j8"]
+
+[ext_resource type="Script" path="res://game_over_menu.gd" id="1_ioi81"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsgje"]
+bg_color = Color(0.270588, 0, 0.486275, 0.745098)
+corner_radius_top_left = 15
+corner_radius_top_right = 15
+corner_radius_bottom_right = 15
+corner_radius_bottom_left = 15
+shadow_size = 2
+shadow_offset = Vector2(10, 10)
+
+[node name="GameOverMenu" type="CanvasLayer"]
+process_mode = 2
+script = ExtResource("1_ioi81")
+
+[node name="GameOverPanel" type="Panel" parent="."]
+anchors_preset = -1
+anchor_left = 0.000379217
+anchor_top = -0.0263889
+anchor_right = 0.000379181
+anchor_bottom = 0.0319444
+offset_left = 222.515
+offset_top = 115.0
+offset_right = 1072.51
+offset_bottom = 605.0
+rotation = 0.0010502
+theme_override_styles/panel = SubResource("StyleBoxFlat_hsgje")
+metadata/_edit_use_anchors_ = true
+
+[node name="SpaceHitsLabel" type="RichTextLabel" parent="."]
+offset_left = 317.515
+offset_top = 395.0
+offset_right = 679.515
+offset_bottom = 441.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Total Spacebar Hits"
+metadata/_edit_use_anchors_ = true
+
+[node name="TotalSemestersLabel" type="RichTextLabel" parent="."]
+offset_left = 317.515
+offset_top = 323.0
+offset_right = 643.515
+offset_bottom = 369.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Total Semesters"
+metadata/_edit_use_anchors_ = true
+
+[node name="TotalCreditsLabel" type="RichTextLabel" parent="."]
+offset_left = 317.515
+offset_top = 256.0
+offset_right = 550.515
+offset_bottom = 310.0
+theme_override_font_sizes/normal_font_size = 30
+text = "Total Credits"
+metadata/_edit_use_anchors_ = true
+
+[node name="RestartButton" type="Button" parent="."]
+offset_left = 433.515
+offset_top = 482.0
+offset_right = 900.515
+offset_bottom = 572.0
+rotation = -0.000142076
+theme_override_font_sizes/font_size = 40
+text = "STUDY OVER AGAIN"
+metadata/_edit_use_anchors_ = true
+
+[node name="GameOverLabel" type="RichTextLabel" parent="."]
+offset_left = 488.515
+offset_top = 144.0
+offset_right = 829.515
+offset_bottom = 232.0
+theme_override_font_sizes/normal_font_size = 55
+theme_override_font_sizes/bold_font_size = 40
+text = "YOU FAILED!"
+metadata/_edit_use_anchors_ = true
+
+[node name="SpaceHitsValue" type="RichTextLabel" parent="."]
+offset_left = 943.515
+offset_top = 393.0
+offset_right = 1044.51
+offset_bottom = 450.0
+theme_override_font_sizes/normal_font_size = 30
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="TotalSemestersValue" type="RichTextLabel" parent="."]
+offset_left = 944.515
+offset_top = 322.0
+offset_right = 1044.51
+offset_bottom = 382.0
+theme_override_font_sizes/normal_font_size = 30
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[node name="TotalCredistsValue" type="RichTextLabel" parent="."]
+offset_left = 944.515
+offset_top = 256.0
+offset_right = 1041.51
+offset_bottom = 306.0
+theme_override_font_sizes/normal_font_size = 30
+text = "0"
+metadata/_edit_use_anchors_ = true
+
+[connection signal="pressed" from="RestartButton" to="." method="_on_restart_button_pressed"]
