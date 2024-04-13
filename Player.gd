@@ -28,6 +28,7 @@ func _physics_process(delta: float) -> void:
 		motion.y = MAXFALLSPEED
 	
 	if Input.is_action_just_pressed("FLAP"):
+		$JumpAudio.play()
 		motion.y = FLAP
 		space_hits += 1
 		

@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://qjugr1frdbvr"]
+[gd_scene load_steps=12 format=3 uid="uid://qjugr1frdbvr"]
 
 [ext_resource type="Script" path="res://Player.gd" id="1_amjm2"]
-[ext_resource type="Texture2D" uid="uid://dkdti2r0levi1" path="res://assets/player.png" id="2_6vi1w"]
+[ext_resource type="Texture2D" uid="uid://cekpw8sllx3su" path="res://assets/player.png" id="2_6vi1w"]
 [ext_resource type="PackedScene" uid="uid://brg7m8ll1ukxl" path="res://wallnode.tscn" id="2_u1trt"]
-[ext_resource type="Texture2D" uid="uid://bi70bh5bl4kmg" path="res://assets/background_blurred.jpg" id="4_4uv85"]
-[ext_resource type="PackedScene" uid="uid://dkwas7p5xm3j8" path="res://game_over_menu.tscn" id="5_glalw"]
+[ext_resource type="Texture2D" uid="uid://cr0hpuuw6ilru" path="res://assets/background_blurred.jpg" id="4_4uv85"]
+[ext_resource type="PackedScene" path="res://game_over_menu.tscn" id="5_glalw"]
+[ext_resource type="AudioStream" uid="uid://cmq6hw0yd53yr" path="res://assets/arcade-game-jump-epic-stock-media-1-00-00.mp3" id="6_tiacu"]
+[ext_resource type="AudioStream" uid="uid://vt1ive5qyuta" path="res://assets/8bit-canon-giulio-fazio-main-version-30900-02-48.mp3" id="7_qvbsu"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eo1n"]
 size = Vector2(14.88, 23.92)
@@ -53,6 +55,9 @@ shape = SubResource("RectangleShape2D_jfuge")
 position = Vector2(-27812, 260)
 scale = Vector2(25, 400)
 shape = SubResource("RectangleShape2D_4sl3b")
+
+[node name="JumpAudio" type="AudioStreamPlayer" parent="PlayerNode/Player"]
+stream = ExtResource("6_tiacu")
 
 [node name="Wallnode" parent="." instance=ExtResource("2_u1trt")]
 position = Vector2(-256, -256)
@@ -120,6 +125,10 @@ scale = Vector2(10.118, 10.3056)
 texture = ExtResource("4_4uv85")
 
 [node name="GameOverMenu" parent="." instance=ExtResource("5_glalw")]
+
+[node name="GameAudio" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_qvbsu")
+autoplay = true
 
 [connection signal="area_exited" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_area_exited"]
 [connection signal="body_entered" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_body_entered"]
