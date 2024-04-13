@@ -1,8 +1,9 @@
-
 # AGILE PLAN
 
 ## Overview
-This plan outlines the development of a game inspired by Flappy Bird, tailored to introduce players to the academic journey at FAI. The game integrates educational elements related to the university's credit system and curriculum.
+This plan outlines the development of a game inspired by Flappy Bird,
+tailored to introduce players to the academic journey at FAI.
+The game integrates educational elements related to the university's credit system and curriculum.
 
 ## Team Composition
 - 2 Team Members
@@ -11,7 +12,6 @@ This plan outlines the development of a game inspired by Flappy Bird, tailored t
 
 ## Sprint Breakdown
 ### Sprint 0: Planning and Setup
-**Duration:** 1 week
 
 #### Goals
 - Set up development environment and tools.
@@ -26,7 +26,6 @@ This plan outlines the development of a game inspired by Flappy Bird, tailored t
 - No testing in this sprint.
 
 ### Sprint 1: Basic Game Mechanics and First Level Design
-**Duration:** 2 weeks
 
 #### Goals
 - Develop basic game mechanics.
@@ -42,7 +41,6 @@ This plan outlines the development of a game inspired by Flappy Bird, tailored t
 - Validate level design feasibility and difficulty.
 
 ### Sprint 2: Implementing Educational Elements
-**Duration:** 2 weeks
 
 #### Goals
 - Integrate educational elements representing the credit system and curriculum.
@@ -58,7 +56,6 @@ This plan outlines the development of a game inspired by Flappy Bird, tailored t
 - Test second level for balance and difficulty.
 
 ### Sprint 3: Multi-level Development and Integration
-**Duration:** 2 weeks
 
 #### Goals
 - Develop additional levels, each representing a different phase of the curriculum.
@@ -73,32 +70,29 @@ This plan outlines the development of a game inspired by Flappy Bird, tailored t
 - Ensure educational content is well integrated.
 
 ### Sprint 4: Polishing, Bug Fixing, and User Testing
-**Duration:** 2 weeks
 
 #### Goals
 - Polish game mechanics and visuals.
 - Fix any remaining bugs.
-- Conduct user testing with other students.
 
 #### Tasks
 - Bug fixing based on testers' reports.
 - Apply visual enhancements and UI improvements.
-- Prepare and conduct user testing sessions.
 
 #### Testing
 - Final round of bug testing.
 - Assist with user testing and feedback collection.
 
 ### Sprint 5: Final Adjustments and Handover
-**Duration:** 1 week
 
 #### Goals
 - Implement feedback from user testing.
-- Prepare game for launch.
+- Prepare game for handover and presentation.
 
 #### Tasks
 - Implement user feedback adjustments.
 - Finalize game.
+- Final presentation.
 
 #### Testing
 - Final testing round post-adjustments.

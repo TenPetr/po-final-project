@@ -8,7 +8,7 @@ const JUMP_VELOCITY = -400.0
 
 var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
 var motion = Vector2.ZERO
-var wall: PackedScene = preload("res://wallnode.tscn")
+var wall: PackedScene = preload("res://scenes/wallnode.tscn")
 
 # Score & metrics variables
 var credits = 0

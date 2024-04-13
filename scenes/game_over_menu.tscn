@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dkwas7p5xm3j8"]
 
-[ext_resource type="Script" path="res://game_over_menu.gd" id="1_ioi81"]
+[ext_resource type="Script" path="res://scripts/game_over_menu.gd" id="1_ioi81"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hsgje"]
 bg_color = Color(0.270588, 0, 0.486275, 0.745098)
@@ -17,7 +17,7 @@ script = ExtResource("1_ioi81")
 
 [node name="GameOverPanel" type="Panel" parent="."]
 anchors_preset = -1
-anchor_left = 0.000379217
+anchor_left = 0.000379181
 anchor_top = -0.0263889
 anchor_right = 0.000379181
 anchor_bottom = 0.0319444

@@ -1,12 +1,12 @@
 [gd_scene load_steps=12 format=3 uid="uid://qjugr1frdbvr"]
 
-[ext_resource type="Script" path="res://Player.gd" id="1_amjm2"]
-[ext_resource type="Texture2D" uid="uid://cekpw8sllx3su" path="res://assets/player.png" id="2_6vi1w"]
-[ext_resource type="PackedScene" uid="uid://brg7m8ll1ukxl" path="res://wallnode.tscn" id="2_u1trt"]
-[ext_resource type="Texture2D" uid="uid://cr0hpuuw6ilru" path="res://assets/background_blurred.jpg" id="4_4uv85"]
-[ext_resource type="PackedScene" path="res://game_over_menu.tscn" id="5_glalw"]
-[ext_resource type="AudioStream" uid="uid://cmq6hw0yd53yr" path="res://assets/arcade-game-jump-epic-stock-media-1-00-00.mp3" id="6_tiacu"]
-[ext_resource type="AudioStream" uid="uid://vt1ive5qyuta" path="res://assets/8bit-canon-giulio-fazio-main-version-30900-02-48.mp3" id="7_qvbsu"]
+[ext_resource type="Script" path="res://scripts/player.gd" id="1_evtga"]
+[ext_resource type="Texture2D" uid="uid://dkdti2r0levi1" path="res://assets/player.png" id="2_l8kr8"]
+[ext_resource type="AudioStream" uid="uid://w8mv5wej7rur" path="res://assets/background_music.mp3" id="3_3pm7q"]
+[ext_resource type="PackedScene" uid="uid://brg7m8ll1ukxl" path="res://scenes/wallnode.tscn" id="4_w3ydr"]
+[ext_resource type="Texture2D" uid="uid://bi70bh5bl4kmg" path="res://assets/background_blurred.jpg" id="5_x8er2"]
+[ext_resource type="PackedScene" uid="uid://dkwas7p5xm3j8" path="res://scenes/game_over_menu.tscn" id="6_7o1v4"]
+[ext_resource type="AudioStream" uid="uid://cwrvqu2hjjnky" path="res://assets/jump_sound.mp3" id="7_aal1f"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1eo1n"]
 size = Vector2(14.88, 23.92)
@@ -30,7 +30,7 @@ z_index = 1
 position = Vector2(-2099, -305)
 
 [node name="Player" type="CharacterBody2D" parent="PlayerNode"]
-script = ExtResource("1_amjm2")
+script = ExtResource("1_evtga")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="PlayerNode/Player"]
 position = Vector2(188, -155)
@@ -40,7 +40,7 @@ shape = SubResource("RectangleShape2D_1eo1n")
 [node name="Sprite2D" type="Sprite2D" parent="PlayerNode/Player"]
 position = Vector2(106.5, -144.5)
 scale = Vector2(1.426, 1.578)
-texture = ExtResource("2_6vi1w")
+texture = ExtResource("2_l8kr8")
 
 [node name="Detect" type="Area2D" parent="PlayerNode/Player"]
 
@@ -57,9 +57,9 @@ scale = Vector2(25, 400)
 shape = SubResource("RectangleShape2D_4sl3b")
 
 [node name="JumpAudio" type="AudioStreamPlayer" parent="PlayerNode/Player"]
-stream = ExtResource("6_tiacu")
+stream = ExtResource("3_3pm7q")
 
-[node name="Wallnode" parent="." instance=ExtResource("2_u1trt")]
+[node name="Wallnode" parent="." instance=ExtResource("4_w3ydr")]
 position = Vector2(-256, -256)
 metadata/_edit_group_ = true
 
@@ -122,12 +122,12 @@ metadata/_edit_use_anchors_ = true
 [node name="Sprite2D" type="Sprite2D" parent="Background/ParallaxLayer"]
 position = Vector2(3.50027, -19.9996)
 scale = Vector2(10.118, 10.3056)
-texture = ExtResource("4_4uv85")
+texture = ExtResource("5_x8er2")
 
-[node name="GameOverMenu" parent="." instance=ExtResource("5_glalw")]
+[node name="GameOverMenu" parent="." instance=ExtResource("6_7o1v4")]
 
 [node name="GameAudio" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("7_qvbsu")
+stream = ExtResource("7_aal1f")
 autoplay = true
 
 [connection signal="area_exited" from="PlayerNode/Player/Detect" to="PlayerNode/Player" method="_on_detect_area_exited"]
